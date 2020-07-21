@@ -1,0 +1,16 @@
+{% extends "base_page.html" %}
+
+{% block content%}
+<h1>Candidates List</h1>
+    {% if my_resource_list %}
+        <ul>
+            {% for x in my_resource_list %}
+                <li>
+                    Name: <a href="{{x.get_absolute_url}}">{{x.first_name}} {{x.last_name}}</a>;<br> Technologies: {{x.technologies.all|join:", " }};<br>Education: {{x.education}};
+                </li>
+            {% endfor%}
+        </ul>
+    {% else %}
+        <p>There are no candidates as of now</p>
+    {% endif %}
+{% endblock %}

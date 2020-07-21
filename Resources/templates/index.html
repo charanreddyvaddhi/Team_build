@@ -1,0 +1,12 @@
+{% extends "base_page.html" %}
+
+{% block content%}
+<h1>Welcome to Human resources list</h1>
+<ul>
+    <li><strong>Number of candidates on bench:</strong> {{ candidates }}</li>
+    <li><strong>Technologies available on bench:</strong> {{techs}}</li>
+
+</ul>
+<p><i>You have visited this site <strong>{{num_visits}}</strong> {% if num_visits == 1 %}time{% else %}times.{% endif %}</i></p>
+
+{% endblock %}

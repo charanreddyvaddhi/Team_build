@@ -1,0 +1,14 @@
+{% extends "base_page.html" %}
+
+{% block content %}
+    <h1>Name: {{object.first_name}} {{object.last_name}}</h1>
+    <p><strong>About:</strong>{{object.About}}</p>
+    <p><strong>Technologies:</strong> {{object.technologies.all|join:", " }}.</p>
+    <p><strong>Experience:</strong> {{object.experience}}.</p>
+    <p><strong>Skills:</strong> {{object.skills.all|join:", " }}.</p>
+    <p><strong>Ratings:</strong> {{object.ratings}}</p>
+    <p><strong>Education:</strong> {{object.education}}.</p>
+
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base_page.html" %}
+{% block content%}
+    <h1>Technologies_list</h1>
+        {% if technologies_list %}
+            <ul>
+                {% for y in technologies_list %}
+                    <li>
+                        {{y.tech}}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+{% endblock %}
