@@ -1,6 +1,9 @@
 {% extends "base_page.html" %}
 
 {% block content%}
+    {% if user.is_authenticated %}
+        <h2>Hi {{ user.get_username }}</h2>
+    {% endif %}
 <h1>Welcome to Human resources list</h1>
 <ul>
     <li><strong>Number of candidates on bench:</strong> {{ candidates }}</li>
